@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Common\CmnGameAccesser.cpp" />
+    <ClCompile Include="Source\Common\CmnNumberCounter.cpp" />
+    <ClCompile Include="Source\Common\Utility\CommonGameUtility.cpp" />
+    <ClCompile Include="Source\Flow\FlowBase.cpp" />
+    <ClCompile Include="Source\Flow\FlowExit.cpp" />
+    <ClCompile Include="Source\Flow\FlowGame.cpp" />
+    <ClCompile Include="Source\Flow\FlowGameClearShowAddress.cpp" />
+    <ClCompile Include="Source\Flow\FlowInterval.cpp" />
+    <ClCompile Include="Source\Flow\FlowManager.cpp" />
+    <ClCompile Include="Source\Flow\FlowMenuBase.cpp" />
+    <ClCompile Include="Source\Flow\FlowPowerUpPlayer.cpp" />
+    <ClCompile Include="Source\Flow\FlowStageResult.cpp" />
+    <ClCompile Include="Source\Flow\FlowStageSelect.cpp" />
+    <ClCompile Include="Source\Flow\FlowTable.cpp" />
+    <ClCompile Include="Source\Flow\FlowTitle.cpp" />
+    <ClCompile Include="Source\Flow\FlowTotalResult.cpp" />
+    <ClCompile Include="Source\Flow\FlowViewScore.cpp" />
+    <ClCompile Include="Source\Flow\Process\FlowProcessBase.cpp" />
+    <ClCompile Include="Source\Flow\Process\FlowProcessBossEnemyDeath.cpp" />
+    <ClCompile Include="Source\Flow\Process\FlowProcessFirstManual.cpp" />
+    <ClCompile Include="Source\Flow\Process\FlowProcessStageStart.cpp" />
+    <ClCompile Include="Source\Game\Attack\Bullet.cpp" />
+    <ClCompile Include="Source\Game\Attack\GameAttackBlade.cpp" />
+    <ClCompile Include="Source\Game\Attack\GameAttackGun.cpp" />
+    <ClCompile Include="Source\Game\Attack\Slashing.cpp" />
+    <ClCompile Include="Source\Game\Effect\GameEffect.cpp" />
+    <ClCompile Include="Source\Game\Enemy\AI\EnemyAIBase.cpp" />
+    <ClCompile Include="Source\Game\Enemy\AI\EnemyAIDashTackle.cpp" />
+    <ClCompile Include="Source\Game\Enemy\AI\EnemyAIDragon.cpp" />
+    <ClCompile Include="Source\Game\Enemy\AI\EnemyAIRanger.cpp" />
+    <ClCompile Include="Source\Game\Enemy\AI\EnemyAISearch.cpp" />
+    <ClCompile Include="Source\Game\Enemy\AI\EnemyAIShoot.cpp" />
+    <ClCompile Include="Source\Game\Enemy\AI\EnemyAITackle.cpp" />
+    <ClCompile Include="Source\Game\Enemy\AI\EnemyAIWizard.cpp" />
+    <ClCompile Include="Source\Game\Enemy\AI\LastBoss\EnemyAILastBoss.cpp" />
+    <ClCompile Include="Source\Game\Enemy\AI\SlimeKing\AISlimeKingSearching.cpp" />
+    <ClCompile Include="Source\Game\Enemy\AI\SlimeKing\AISlimeKingTackle.cpp" />
+    <ClCompile Include="Source\Game\Enemy\EnemyAhriman.cpp" />
+    <ClCompile Include="Source\Game\Enemy\EnemyAnotherSlime.cpp" />
+    <ClCompile Include="Source\Game\Enemy\EnemyBase.cpp" />
+    <ClCompile Include="Source\Game\Enemy\EnemyCow.cpp" />
+    <ClCompile Include="Source\Game\Enemy\EnemyDragon.cpp" />
+    <ClCompile Include="Source\Game\Enemy\EnemyLastBoss.cpp" />
+    <ClCompile Include="Source\Game\Enemy\EnemyManager.cpp" />
+    <ClCompile Include="Source\Game\Enemy\EnemyRanger.cpp" />
+    <ClCompile Include="Source\Game\Enemy\EnemySlime.cpp" />
+    <ClCompile Include="Source\Game\Enemy\EnemySlimeKing.cpp" />
+    <ClCompile Include="Source\Game\Enemy\EnemyWizard.cpp" />
+    <ClCompile Include="Source\Game\Game2DBase.cpp" />
+    <ClCompile Include="Source\Game\GameManager.cpp" />
+    <ClCompile Include="Source\Game\GameMap.cpp" />
+    <ClCompile Include="Source\Game\GameRecorder.cpp" />
+    <ClCompile Include="Source\Game\GameRegister.cpp" />
+    <ClCompile Include="Source\Game\Item\ItemManager.cpp" />
+    <ClCompile Include="Source\Game\Item\ItemObject.cpp" />
+    <ClCompile Include="Source\Game\Player\GamePlayer.cpp" />
+    <ClCompile Include="Source\Game\Player\GamePlayerCombo.cpp" />
+    <ClCompile Include="Source\Game\Player\GamePlayerStatusMenu.cpp" />
+    <ClCompile Include="Source\Game\Timer\GameCountDownTimer.cpp" />
+    <ClCompile Include="Source\Game\Timer\GameStageTimer.cpp" />
+    <ClCompile Include="Source\main.cpp" />
+    <ClCompile Include="Source\Math\MathAngle.cpp" />
+    <ClCompile Include="Source\Math\MathCommon.cpp" />
+    <ClCompile Include="Source\Math\MathUtility.cpp" />
+    <ClCompile Include="Source\Math\MathVector.cpp" />
+    <ClCompile Include="Source\System\Collision\SystemCollisionManager.cpp" />
+    <ClCompile Include="Source\System\Collision\SystemCollisionUnit.cpp" />
+    <ClCompile Include="Source\System\Draw2D\SystemDraw2DManager.cpp" />
+    <ClCompile Include="Source\System\Draw2D\SystemDraw2DResource.cpp" />
+    <ClCompile Include="Source\System\Input\SystemInputWatcher.cpp" />
+    <ClCompile Include="Source\System\Menu\SystemMenuParts.cpp" />
+    <ClCompile Include="Source\System\Menu\SystemMenuPartsCounter.cpp" />
+    <ClCompile Include="Source\System\Menu\SystemMenuWindow.cpp" />
+    <ClCompile Include="Source\System\Message\SystemMessageManager.cpp" />
+    <ClCompile Include="Source\System\Message\SystemMessageUnit.cpp" />
+    <ClCompile Include="Source\System\picojson.cpp" />
+    <ClCompile Include="Source\System\Sound\SystemSoundManager.cpp" />
+    <ClCompile Include="Source\System\SystemBgManager.cpp" />
+    <ClCompile Include="Source\System\SystemFadeManager.cpp" />
+    <ClCompile Include="Source\System\SystemFPSManager.cpp" />
+    <ClCompile Include="Source\System\SystemMessage.cpp" />
+    <ClCompile Include="Source\System\SystemPauseFilter.cpp" />
+    <ClCompile Include="Source\System\Task\SystemTaskManager.cpp" />
+    <ClCompile Include="Source\System\Task\SystemTaskUnit.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Common\CmnGameAccesser.h" />
+    <ClInclude Include="Source\Common\CmnNumberCounter.h" />
+    <ClInclude Include="Source\Common\CommonDefine.h" />
+    <ClInclude Include="Source\Common\ConvertDxFuncToIfstream.h" />
+    <ClInclude Include="Source\Common\Utility\CommonGameUtility.h" />
+    <ClInclude Include="Source\Flow\FlowBase.h" />
+    <ClInclude Include="Source\Flow\FlowExit.h" />
+    <ClInclude Include="Source\Flow\FlowGame.h" />
+    <ClInclude Include="Source\Flow\FlowGameClearShowAddress.h" />
+    <ClInclude Include="Source\Flow\FlowInterval.h" />
+    <ClInclude Include="Source\Flow\FlowManager.h" />
+    <ClInclude Include="Source\Flow\FlowMenuBase.h" />
+    <ClInclude Include="Source\Flow\FlowPowerUpPlayer.h" />
+    <ClInclude Include="Source\Flow\FlowStageResult.h" />
+    <ClInclude Include="Source\Flow\FlowStageSelect.h" />
+    <ClInclude Include="Source\Flow\FlowTable.h" />
+    <ClInclude Include="Source\Flow\FlowTitle.h" />
+    <ClInclude Include="Source\Flow\FlowTotalResult.h" />
+    <ClInclude Include="Source\Flow\FlowViewScore.h" />
+    <ClInclude Include="Source\Flow\Process\FlowProcessBase.h" />
+    <ClInclude Include="Source\Flow\Process\FlowProcessBossEnemyDeath.h" />
+    <ClInclude Include="Source\Flow\Process\FlowProcessFirstManual.h" />
+    <ClInclude Include="Source\Flow\Process\FlowProcessStageStart.h" />
+    <ClInclude Include="Source\Game\Attack\Bullet.h" />
+    <ClInclude Include="Source\Game\Attack\GameAttackBlade.h" />
+    <ClInclude Include="Source\Game\Attack\GameAttackGun.h" />
+    <ClInclude Include="Source\Game\Attack\Slashing.h" />
+    <ClInclude Include="Source\Game\Effect\GameEffect.h" />
+    <ClInclude Include="Source\Game\Enemy\AI\EnemyAIBase.h" />
+    <ClInclude Include="Source\Game\Enemy\AI\EnemyAIDashTackle.h" />
+    <ClInclude Include="Source\Game\Enemy\AI\EnemyAIDefine.h" />
+    <ClInclude Include="Source\Game\Enemy\AI\EnemyAIDragon.h" />
+    <ClInclude Include="Source\Game\Enemy\AI\EnemyAIRanger.h" />
+    <ClInclude Include="Source\Game\Enemy\AI\EnemyAISearch.h" />
+    <ClInclude Include="Source\Game\Enemy\AI\EnemyAIShoot.h" />
+    <ClInclude Include="Source\Game\Enemy\AI\EnemyAITackle.h" />
+    <ClInclude Include="Source\Game\Enemy\AI\EnemyAIWizard.h" />
+    <ClInclude Include="Source\Game\Enemy\AI\LastBoss\EnemyAILastBoss.h" />
+    <ClInclude Include="Source\Game\Enemy\AI\SlimeKing\AISlimeKingSearching.h" />
+    <ClInclude Include="Source\Game\Enemy\AI\SlimeKing\AISlimeKingTackle.h" />
+    <ClInclude Include="Source\Game\Enemy\EnemyAhriman.h" />
+    <ClInclude Include="Source\Game\Enemy\EnemyAnotherSlime.h" />
+    <ClInclude Include="Source\Game\Enemy\EnemyBase.h" />
+    <ClInclude Include="Source\Game\Enemy\EnemyCow.h" />
+    <ClInclude Include="Source\Game\Enemy\EnemyDragon.h" />
+    <ClInclude Include="Source\Game\Enemy\EnemyLastBoss.h" />
+    <ClInclude Include="Source\Game\Enemy\EnemyManager.h" />
+    <ClInclude Include="Source\Game\Enemy\EnemyRanger.h" />
+    <ClInclude Include="Source\Game\Enemy\EnemySlime.h" />
+    <ClInclude Include="Source\Game\Enemy\EnemySlimeKing.h" />
+    <ClInclude Include="Source\Game\Enemy\EnemyWizard.h" />
+    <ClInclude Include="Source\Game\Game2DBase.h" />
+    <ClInclude Include="Source\Game\GameManager.h" />
+    <ClInclude Include="Source\Game\GameMap.h" />
+    <ClInclude Include="Source\Game\GameRecorder.h" />
+    <ClInclude Include="Source\Game\GameRegister.h" />
+    <ClInclude Include="Source\Game\Item\ItemManager.h" />
+    <ClInclude Include="Source\Game\Item\ItemObject.h" />
+    <ClInclude Include="Source\Game\Player\GamePlayer.h" />
+    <ClInclude Include="Source\Game\Player\GamePlayerCombo.h" />
+    <ClInclude Include="Source\Game\Player\GamePlayerStatusMenu.h" />
+    <ClInclude Include="Source\Game\Timer\GameCountDownTimer.h" />
+    <ClInclude Include="Source\Game\Timer\GameStageTimer.h" />
+    <ClInclude Include="Source\Math\MathAngle.h" />
+    <ClInclude Include="Source\Math\MathCommon.h" />
+    <ClInclude Include="Source\Math\MathMatrix.h" />
+    <ClInclude Include="Source\Math\MathQuaternion.h" />
+    <ClInclude Include="Source\Math\MathUtility.h" />
+    <ClInclude Include="Source\Math\MathVector.h" />
+    <ClInclude Include="Source\System\Collision\SystemCollisionManager.h" />
+    <ClInclude Include="Source\System\Collision\SystemCollisionUnit.h" />
+    <ClInclude Include="Source\System\coroutine.hpp" />
+    <ClInclude Include="Source\System\Draw2D\SystemDraw2DDefine.h" />
+    <ClInclude Include="Source\System\Draw2D\SystemDraw2DManager.h" />
+    <ClInclude Include="Source\System\Draw2D\SystemDraw2DResource.h" />
+    <ClInclude Include="Source\System\Input\SystemInputWatcher.h" />
+    <ClInclude Include="Source\System\Menu\SystemMenuParts.h" />
+    <ClInclude Include="Source\System\Menu\SystemMenuPartsCounter.h" />
+    <ClInclude Include="Source\System\Menu\SystemMenuPartsFactory.h" />
+    <ClInclude Include="Source\System\Menu\SystemMenuWindow.h" />
+    <ClInclude Include="Source\System\Message\SystemMessageManager.h" />
+    <ClInclude Include="Source\System\Message\SystemMessageUnit.h" />
+    <ClInclude Include="Source\System\picojson.h" />
+    <ClInclude Include="Source\System\Sound\SystemSoundManager.h" />
+    <ClInclude Include="Source\System\Sound\SystemSoundTable.h" />
+    <ClInclude Include="Source\System\SystemBgManager.h" />
+    <ClInclude Include="Source\System\SystemDefine.h" />
+    <ClInclude Include="Source\System\SystemFadeManager.h" />
+    <ClInclude Include="Source\System\SystemFPSManager.h" />
+    <ClInclude Include="Source\System\SystemMessage.h" />
+    <ClInclude Include="Source\System\SystemPauseFilter.h" />
+    <ClInclude Include="Source\System\Task\SystemTaskManager.h" />
+    <ClInclude Include="Source\System\Task\SystemTaskUnit.h" />
+    <ClInclude Include="Source\System\yield.hpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{52377480-6CC6-47BE-A593-D04E651D02AB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>My2DAction</RootNamespace>
+    <ProjectName>2DAction</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName)\Lib\DxLib;$(SolutionDir)$(SolutionName)\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(SolutionName)\Lib\DxLib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)$(SolutionName)\Lib\DxLib;$(SolutionDir)$(SolutionName)\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(SolutionName)\Lib\DxLib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

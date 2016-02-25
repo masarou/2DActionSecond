@@ -1,0 +1,15 @@
+{
+	"basicInfo":[
+		{"fileName":"EnemyWizardCrystal.png"
+		, "animDefault":"default"
+		, "sizeW": 48
+		, "sizeH": 48
+		, "splitW": 5
+		, "splitH": 1
+		, "total": 5 }
+	],
+	
+	"animeInfo":[
+		{"animTag":"default",	"frameSpeed":7,	"animIndex":[0,1,2,3,4],	"nextAnim":"default"}
+	]	
+}

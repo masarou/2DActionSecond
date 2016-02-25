@@ -1,0 +1,23 @@
+{
+	"stageKind":[
+		{"type": "DESTROY"},
+		{"TimeS": 0},
+		{"destroyMax": 1}
+	],
+	"bossInfo":[
+	],
+	"initEnemy":[
+		{"enemyKind": "ENEMY_KIND_WIZARD", "level": 1, "num": 1}
+	],
+	"gameCondition":[
+		{"EnemyMax": 80, "frequency":5},
+		{"ItemMax": 0, "frequency":0}
+	],
+	"appearEnemy":[
+	],
+	"pointInfo":[
+		{"score": 10000, "value": 100},
+		{"score": 5000, "value": 50},
+		{"score": 0, "value": 20}
+	]
+}

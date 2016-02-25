@@ -1,0 +1,9 @@
+{
+	"eventdata":[
+		{"event":"proceed", "path":"FlowGameStage01.json"},
+		{"event":"stageselect", "path":"FlowStageSelect.json"}
+	],
+	"bgdata":[
+		{"bgid":"BGID_COMMON"}
+	]
+}

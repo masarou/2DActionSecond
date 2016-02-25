@@ -1,0 +1,18 @@
+{
+	"partsInfo":[
+		{"partsName":"frame",		"loadJson":"PowerUpFrame.json",			"x": 640,	"y": 360},
+		{"partsName":"itemImage",	"loadJson":"ItemImage.json",			"partsType":"PARTS_SINGLE_DRAW",	"x": 410,	"y": 260},
+		{"partsName":"levelMax",	"loadJson":"NumberCounterMiddle.json",	"partsType":"PARTS_NUM_COUNTER",	"x": 1000,	"y": 256},
+		{"partsName":"currLevel",	"loadJson":"NumberCounterMiddle.json",	"partsType":"PARTS_NUM_COUNTER",	"x": 850,	"y": 256},
+		{"partsName":"nextPoint",	"loadJson":"NumberCounter.json",		"partsType":"PARTS_NUM_COUNTER",	"x": 955,	"y": 347},
+		{"partsName":"currPoint",	"loadJson":"NumberCounterRitch.json",	"partsType":"PARTS_NUM_COUNTER",	"x": 1080,	"y": 665},
+		{"partsName":"decisionUp",	"loadJson":"DecisionPowerUp.json",		"x": 990,	"y": 660},
+		{"partsName":"point0",		"loadJson":"SelectPoint.json",			"x": 448,	"y": 70},
+		{"partsName":"point1",		"loadJson":"SelectPoint.json",			"x": 512,	"y": 70},
+		{"partsName":"point2",		"loadJson":"SelectPoint.json",			"x": 576,	"y": 70},
+		{"partsName":"point3",		"loadJson":"SelectPoint.json",			"x": 640,	"y": 70},
+		{"partsName":"point4",		"loadJson":"SelectPoint.json",			"x": 704,	"y": 70},
+		{"partsName":"point5",		"loadJson":"SelectPoint.json",			"x": 768,	"y": 70},
+		{"partsName":"point6",		"loadJson":"SelectPoint.json",			"x": 832,	"y": 70}
+	]
+}

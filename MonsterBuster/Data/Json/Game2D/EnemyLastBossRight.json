@@ -1,0 +1,20 @@
+{
+	"basicInfo":[
+		{"fileName":"LastBossRight.png"
+		, "animDefault":"default"
+		, "sizeW": 75
+		, "sizeH": 175
+		, "splitW": 1
+		, "splitH": 1
+		, "total": 1 }
+	],
+	
+	"animeInfo":[
+		{"animTag":"default",	"frameSpeed":1000,	"animIndex":[0],	"nextAnim":"default"}
+	],
+	
+	"collisionCircle":[
+		{"posX":37,	"posY":140,	"radius":32},
+		{"posX":37,	"posY":60,	"radius":32}
+	]
+}

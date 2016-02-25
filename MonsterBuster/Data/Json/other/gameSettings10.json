@@ -1,0 +1,23 @@
+{
+	"stageKind":[
+		{"type": "DESTROY_BOSS"},
+		{"TimeS": 0},
+		{"destroyMax": 1}
+	],
+	"bossInfo":[
+		{"enemyKind": "ENEMY_KIND_LAST_BOSS", 	"level": 7, "num": 1, "initPosX": 1300, "initPosY": 1000}
+	],
+	"initEnemy":[
+	],
+	"gameCondition":[
+		{"EnemyMax": 3, "frequency":5},
+		{"ItemMax": 3, "frequency":0}
+	],
+	"appearEnemy":[
+	],
+	"pointInfo":[
+		{"score": 300000, "value": 150},
+		{"score": 1000, "value": 70},
+		{"score": 0, "value": 30}
+	]
+}

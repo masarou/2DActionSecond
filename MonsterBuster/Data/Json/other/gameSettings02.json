@@ -1,0 +1,24 @@
+{
+	"stageKind":[
+		{"type": "DESTROY"},
+		{"TimeS": 0},
+		{"destroyMax": 30}
+	],
+	"bossInfo":[
+	],
+	"initEnemy":[
+		{"enemyKind": "ENEMY_KIND_AHRIMAN", "level": 1, "num": 5},
+		{"enemyKind": "ENEMY_KIND_SLIME", 	"level": 1, "num": 25}
+	],
+	"gameCondition":[
+		{"EnemyMax": 0, "frequency":0},
+		{"ItemMax": 0, "frequency":0}
+	],
+	"appearEnemy":[
+	],
+	"pointInfo":[
+		{"score": 16000, "value": 30},
+		{"score": 13500, "value": 20},
+		{"score": 0, "value": 10}
+	]
+}

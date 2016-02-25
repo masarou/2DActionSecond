@@ -1,0 +1,28 @@
+{
+	"stageKind":[
+		{"type": "DESTROY"},
+		{"TimeS": 0},
+		{"destroyMax": 50}
+	],
+	"bossInfo":[
+	],
+	"initEnemy":[
+		{"enemyKind": "ENEMY_KIND_AHRIMAN", "level": 6, "num": 5},
+		{"enemyKind": "ENEMY_KIND_SLIME", 	"level": 7, "num": 20},
+		{"enemyKind": "ENEMY_KIND_COW", 	"level": 6, "num": 3}
+	],
+	"gameCondition":[
+		{"EnemyMax": 30, "frequency":4},
+		{"ItemMax": 0, "frequency":0}
+	],
+	"appearEnemy":[
+		{"enemyKind": "ENEMY_KIND_AHRIMAN", "level":6, "frequency":15},
+		{"enemyKind": "ENEMY_KIND_SLIME",	"level":7, "frequency":70},
+		{"enemyKind": "ENEMY_KIND_COW",		"level":6, "frequency":15}
+	],
+	"pointInfo":[
+		{"score": 53500, "value": 100},
+		{"score": 48500, "value": 60},
+		{"score": 0, "value": 30}
+	]
+}

@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{23c06d47-eb42-4f88-b0c9-2d19c1302e9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{143f4594-da2d-481d-a75b-13cb06a78b43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Task">
+      <UniqueIdentifier>{9ff8f701-2715-42a6-9f2d-465874af5d4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Flow">
+      <UniqueIdentifier>{7a0cb7d5-1b01-4604-a2d3-748f7d835c6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Input">
+      <UniqueIdentifier>{8f27e513-6c71-49de-b739-dea87fa5d320}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{770e7e59-34c3-4f40-b22b-86c46e7bdaaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{15cd31e2-b6ec-4c3c-9b39-050a232f35d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Sound">
+      <UniqueIdentifier>{8df6a614-a88d-4e19-97cb-28b2a9899262}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Draw2D">
+      <UniqueIdentifier>{3ec096bf-5a57-4edb-887d-2e73655cfeaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Player">
+      <UniqueIdentifier>{6a5ed5c6-8b5e-4242-a7cb-505f01a05590}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Enemy">
+      <UniqueIdentifier>{8562aac0-427e-4c4d-9ab7-6ea35f999247}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Enemy\AI">
+      <UniqueIdentifier>{eb92e67e-4f50-48b9-95a2-2b9ee48d6c7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Effect">
+      <UniqueIdentifier>{7eacabea-4dfb-46cf-a861-23a175321c46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Item">
+      <UniqueIdentifier>{8d4d66c3-1b90-43e1-a05c-91e63b042c82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Message">
+      <UniqueIdentifier>{e91735cd-0e47-4f7e-b235-7345a3a2d238}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Collision">
+      <UniqueIdentifier>{980b874e-1d44-4099-8701-b069423d929e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Timer">
+      <UniqueIdentifier>{404d0c94-9c6f-49cd-aa9e-3013a61b01bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Attack">
+      <UniqueIdentifier>{6fa071bc-2a18-4645-adab-ac3bbf93778e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Flow\Process">
+      <UniqueIdentifier>{34dad26e-a1fe-497a-8432-eb7a38b1e5c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Menu">
+      <UniqueIdentifier>{8628adb3-56a3-44b0-84b4-5d668ddfb7e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Enemy\AI\SlimeKing">
+      <UniqueIdentifier>{91641e11-9033-4292-8dee-8be84ed0cf3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Enemy\AI\LastBoss">
+      <UniqueIdentifier>{18a10ed5-aad4-4779-9f64-49d60bef2cf0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\System\SystemDefine.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Task\SystemTaskManager.h">
+      <Filter>System\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Task\SystemTaskUnit.h">
+      <Filter>System\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Flow\FlowBase.h">
+      <Filter>Flow</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Flow\FlowGame.h">
+      <Filter>Flow</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Flow\FlowManager.h">
+      <Filter>Flow</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Flow\FlowTable.h">
+      <Filter>Flow</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Flow\FlowTitle.h">
+      <Filter>Flow</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Input\SystemInputWatcher.h">
+      <Filter>System\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Math\MathAngle.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Math\MathCommon.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Math\MathMatrix.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Math\MathQuaternion.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Math\MathVector.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\picojson.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Game2DBase.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Sound\SystemSoundManager.h">
+      <Filter>System\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\GameMap.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\SystemFPSManager.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Draw2D\SystemDraw2DDefine.h">
+      <Filter>System\Draw2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Draw2D\SystemDraw2DManager.h">
+      <Filter>System\Draw2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Draw2D\SystemDraw2DResource.h">
+      <Filter>System\Draw2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Player\GamePlayer.h">
+      <Filter>Game\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\CmnGameAccesser.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\Utility\CommonGameUtility.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\EnemyBase.h">
+      <Filter>Game\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\EnemyManager.h">
+      <Filter>Game\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\CommonDefine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Effect\GameEffect.h">
+      <Filter>Game\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Math\MathUtility.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Item\ItemManager.h">
+      <Filter>Game\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Item\ItemObject.h">
+      <Filter>Game\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\GameRegister.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\SystemFadeManager.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Flow\FlowExit.h">
+      <Filter>Flow</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Flow\FlowViewScore.h">
+      <Filter>Flow</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\CmnNumberCounter.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Message\SystemMessageUnit.h">
+      <Filter>System\Message</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Message\SystemMessageManager.h">
+      <Filter>System\Message</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\GameManager.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Collision\SystemCollisionManager.h">
+      <Filter>System\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Collision\SystemCollisionUnit.h">
+      <Filter>System\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Flow\FlowStageResult.h">
+      <Filter>Flow</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Flow\FlowTotalResult.h">
+      <Filter>Flow</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Flow\FlowInterval.h">
+      <Filter>Flow</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\GameRecorder.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Player\GamePlayerStatusMenu.h">
+      <Filter>Game\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Player\GamePlayerCombo.h">
+      <Filter>Game\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\SystemPauseFilter.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Timer\GameCountDownTimer.h">
+      <Filter>Game\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Timer\GameStageTimer.h">
+      <Filter>Game\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Attack\Bullet.h">
+      <Filter>Game\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Attack\GameAttackGun.h">
+      <Filter>Game\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Attack\GameAttackBlade.h">
+      <Filter>Game\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Attack\Slashing.h">
+      <Filter>Game\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\AI\EnemyAIBase.h">
+      <Filter>Game\Enemy\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\AI\EnemyAIDefine.h">
+      <Filter>Game\Enemy\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\AI\EnemyAISearch.h">
+      <Filter>Game\Enemy\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\AI\EnemyAIShoot.h">
+      <Filter>Game\Enemy\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\AI\EnemyAITackle.h">
+      <Filter>Game\Enemy\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Flow\Process\FlowProcessBase.h">
+      <Filter>Flow\Process</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\SystemBgManager.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Flow\FlowPowerUpPlayer.h">
+      <Filter>Flow</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Menu\SystemMenuParts.h">
+      <Filter>System\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Menu\SystemMenuWindow.h">
+      <Filter>System\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Sound\SystemSoundTable.h">
+      <Filter>System\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Menu\SystemMenuPartsCounter.h">
+      <Filter>System\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Menu\SystemMenuPartsFactory.h">
+      <Filter>System\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Flow\FlowMenuBase.h">
+      <Filter>Flow</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\AI\SlimeKing\AISlimeKingSearching.h">
+      <Filter>Game\Enemy\AI\SlimeKing</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\AI\SlimeKing\AISlimeKingTackle.h">
+      <Filter>Game\Enemy\AI\SlimeKing</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Flow\Process\FlowProcessFirstManual.h">
+      <Filter>Flow\Process</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\AI\EnemyAIDashTackle.h">
+      <Filter>Game\Enemy\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\EnemySlime.h">
+      <Filter>Game\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Flow\Process\FlowProcessBossEnemyDeath.h">
+      <Filter>Flow\Process</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\EnemyAhriman.h">
+      <Filter>Game\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\EnemyCow.h">
+      <Filter>Game\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\SystemMessage.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\EnemyWizard.h">
+      <Filter>Game\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\AI\EnemyAIWizard.h">
+      <Filter>Game\Enemy\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\coroutine.hpp">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\yield.hpp">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Flow\Process\FlowProcessStageStart.h">
+      <Filter>Flow\Process</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Flow\FlowGameClearShowAddress.h">
+      <Filter>Flow</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\EnemyDragon.h">
+      <Filter>Game\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\AI\EnemyAIDragon.h">
+      <Filter>Game\Enemy\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\EnemyAnotherSlime.h">
+      <Filter>Game\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\EnemyLastBoss.h">
+      <Filter>Game\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\AI\LastBoss\EnemyAILastBoss.h">
+      <Filter>Game\Enemy\AI\LastBoss</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Flow\FlowStageSelect.h">
+      <Filter>Flow</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\ConvertDxFuncToIfstream.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\AI\EnemyAIRanger.h">
+      <Filter>Game\Enemy\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\EnemyRanger.h">
+      <Filter>Game\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Enemy\EnemySlimeKing.h">
+      <Filter>Game\Enemy</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\main.cpp" />
+    <ClCompile Include="Source\System\Task\SystemTaskManager.cpp">
+      <Filter>System\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\Task\SystemTaskUnit.cpp">
+      <Filter>System\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Flow\FlowBase.cpp">
+      <Filter>Flow</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Flow\FlowGame.cpp">
+      <Filter>Flow</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Flow\FlowManager.cpp">
+      <Filter>Flow</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Flow\FlowTable.cpp">
+      <Filter>Flow</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Flow\FlowTitle.cpp">
+      <Filter>Flow</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\Input\SystemInputWatcher.cpp">
+      <Filter>System\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Math\MathAngle.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Math\MathCommon.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Math\MathVector.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Game2DBase.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\picojson.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\Sound\SystemSoundManager.cpp">
+      <Filter>System\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\GameMap.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\SystemFPSManager.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\Draw2D\SystemDraw2DManager.cpp">
+      <Filter>System\Draw2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\Draw2D\SystemDraw2DResource.cpp">
+      <Filter>System\Draw2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Player\GamePlayer.cpp">
+      <Filter>Game\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\CmnGameAccesser.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Utility\CommonGameUtility.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\EnemyBase.cpp">
+      <Filter>Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\EnemyManager.cpp">
+      <Filter>Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Effect\GameEffect.cpp">
+      <Filter>Game\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Math\MathUtility.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Item\ItemManager.cpp">
+      <Filter>Game\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Item\ItemObject.cpp">
+      <Filter>Game\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\GameRegister.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\SystemFadeManager.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Flow\FlowExit.cpp">
+      <Filter>Flow</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Flow\FlowViewScore.cpp">
+      <Filter>Flow</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\CmnNumberCounter.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\Message\SystemMessageUnit.cpp">
+      <Filter>System\Message</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\Message\SystemMessageManager.cpp">
+      <Filter>System\Message</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\GameManager.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\Collision\SystemCollisionManager.cpp">
+      <Filter>System\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\Collision\SystemCollisionUnit.cpp">
+      <Filter>System\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Flow\FlowStageResult.cpp">
+      <Filter>Flow</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Flow\FlowTotalResult.cpp">
+      <Filter>Flow</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Flow\FlowInterval.cpp">
+      <Filter>Flow</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\GameRecorder.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Player\GamePlayerStatusMenu.cpp">
+      <Filter>Game\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Player\GamePlayerCombo.cpp">
+      <Filter>Game\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\SystemPauseFilter.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Timer\GameCountDownTimer.cpp">
+      <Filter>Game\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Timer\GameStageTimer.cpp">
+      <Filter>Game\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Attack\Bullet.cpp">
+      <Filter>Game\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Attack\GameAttackGun.cpp">
+      <Filter>Game\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Attack\GameAttackBlade.cpp">
+      <Filter>Game\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Attack\Slashing.cpp">
+      <Filter>Game\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\AI\EnemyAIBase.cpp">
+      <Filter>Game\Enemy\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\AI\EnemyAISearch.cpp">
+      <Filter>Game\Enemy\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\AI\EnemyAIShoot.cpp">
+      <Filter>Game\Enemy\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\AI\EnemyAITackle.cpp">
+      <Filter>Game\Enemy\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Flow\Process\FlowProcessBase.cpp">
+      <Filter>Flow\Process</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\SystemBgManager.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Flow\FlowPowerUpPlayer.cpp">
+      <Filter>Flow</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\Menu\SystemMenuParts.cpp">
+      <Filter>System\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\Menu\SystemMenuWindow.cpp">
+      <Filter>System\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\Menu\SystemMenuPartsCounter.cpp">
+      <Filter>System\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Flow\FlowMenuBase.cpp">
+      <Filter>Flow</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\AI\SlimeKing\AISlimeKingSearching.cpp">
+      <Filter>Game\Enemy\AI\SlimeKing</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\AI\SlimeKing\AISlimeKingTackle.cpp">
+      <Filter>Game\Enemy\AI\SlimeKing</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Flow\Process\FlowProcessFirstManual.cpp">
+      <Filter>Flow\Process</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\AI\EnemyAIDashTackle.cpp">
+      <Filter>Game\Enemy\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\EnemySlime.cpp">
+      <Filter>Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Flow\Process\FlowProcessBossEnemyDeath.cpp">
+      <Filter>Flow\Process</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\EnemyAhriman.cpp">
+      <Filter>Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\EnemyCow.cpp">
+      <Filter>Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\SystemMessage.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\EnemyWizard.cpp">
+      <Filter>Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\AI\EnemyAIWizard.cpp">
+      <Filter>Game\Enemy\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Flow\Process\FlowProcessStageStart.cpp">
+      <Filter>Flow\Process</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Flow\FlowGameClearShowAddress.cpp">
+      <Filter>Flow</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\EnemyDragon.cpp">
+      <Filter>Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\AI\EnemyAIDragon.cpp">
+      <Filter>Game\Enemy\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\EnemyAnotherSlime.cpp">
+      <Filter>Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\EnemyLastBoss.cpp">
+      <Filter>Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\AI\LastBoss\EnemyAILastBoss.cpp">
+      <Filter>Game\Enemy\AI\LastBoss</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Flow\FlowStageSelect.cpp">
+      <Filter>Flow</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\AI\EnemyAIRanger.cpp">
+      <Filter>Game\Enemy\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\EnemyRanger.cpp">
+      <Filter>Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\Enemy\EnemySlimeKing.cpp">
+      <Filter>Game\Enemy</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

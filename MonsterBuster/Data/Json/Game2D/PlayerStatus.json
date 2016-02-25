@@ -1,0 +1,20 @@
+{
+	"basicInfo":[
+		{"fileName":"lifeFrame.png"
+		, "animDefault":"default"
+		, "sizeW": 480
+		, "sizeH": 70
+		, "splitW": 1
+		, "splitH": 1
+		, "total": 1 }
+	],
+	
+	"animeInfo":[
+		{"animTag":"default",	"frameSpeed":1000,	"animIndex":[0],	"nextAnim":"default"}
+	],
+	
+	"partsInfo":[
+		{"partsName":"lifeCurr",	"loadJson":"NumberCounter.json",	"partsType":"PARTS_NUM_COUNTER",	"x": 145,	"y": -5},
+		{"partsName":"lifeMax",		"loadJson":"NumberCounterSmall.json",	"partsType":"PARTS_NUM_COUNTER",	"x": 235,	"y": 0}
+	]
+}
