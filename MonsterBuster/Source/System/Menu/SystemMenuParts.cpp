@@ -22,15 +22,16 @@ MenuParts::MenuParts( const std::string &partsStr, const std::string &jsonStr, c
 : m_invalidDraw( false )
 , m_partsNameStr( partsStr )
 , m_readJsonStr( jsonStr )
-, m_originPos( originalPos )
-, m_priority( priority )
+, m_relativePos( originalPos )
 {
 	m_texMine.Init();
 	m_partsArray.clear();
 	m_partsMap.clear();
 
-	// ここでパーツのすべてをセットアップ!!
-	SetupParts();
+	if( !jsonStr.empty() ){
+		// ここでパーツのすべてをセットアップ!!
+		SetupParts( priority );
+	}
 }
 
 
@@ -59,7 +60,12 @@ void MenuParts::UpdatePartsRecursive()
 /* ================================================ */
 void MenuParts::DrawPartsRecursive()
 {
-	if( !m_invalidDraw && m_texMine.m_pTex2D ){
+	// 描画無効ならば子の描画も含めやらない
+	if( m_invalidDraw ){
+		return;
+	}
+
+	if( m_texMine.m_pTex2D ){
 		m_texMine.m_pTex2D->DrawUpdate2D();
 	}
 
@@ -161,19 +167,21 @@ bool MenuParts::SetPartsAnim( const std::string &partsName, const std::string &a
  * @brief	画面セットアップ準備再帰関数
  */
 /* ================================================ */
-void MenuParts::SetupParts()
+void MenuParts::SetupParts( const Common::PRIORITY &priority )
 {
 	// ステータスメニューのパーツ情報取得
-	Utility::GetPartsInfoFromJson( m_readJsonStr, m_partsMap );
-	auto it = m_partsMap.begin();
-	for(;;)
-	{
-		if( it == m_partsMap.end() ){
-			break;
+	if( !m_readJsonStr.empty() ){
+		Utility::GetPartsInfoFromJson( m_readJsonStr, m_partsMap );
+		auto it = m_partsMap.begin();
+		for(;;)
+		{
+			if( it == m_partsMap.end() ){
+				break;
+			}
+			MenuParts *parts = CreatePartsFactory( it->second.m_type, it->first, it->second.m_jsonStr, priority, it->second.m_pos + m_relativePos );
+			m_partsArray.push_back(parts);
+			++it;
 		}
-		MenuParts *parts = CreatePartsFactory( it->second.m_type, it->first, it->second.m_jsonStr, m_priority, it->second.m_pos + m_originPos );
-		m_partsArray.push_back(parts);
-		++it;
 	}
 
 	if( m_partsNameStr.compare("root") != 0 || m_partsArray.empty() ){
@@ -183,15 +191,13 @@ void MenuParts::SetupParts()
 		if( m_texMine.m_pTex2D ){
 			TEX_DRAW_INFO drawInfo;
 			drawInfo.m_fileName = m_readJsonStr.c_str();
-			drawInfo.m_posOrigin.x	= m_originPos.x;
-			drawInfo.m_posOrigin.y	= m_originPos.y;
-			drawInfo.m_prioity		= m_priority;
+			drawInfo.m_posOrigin.x	= m_relativePos.x;
+			drawInfo.m_posOrigin.y	= m_relativePos.y;
+			drawInfo.m_category		= Common::CATEGORY_MENU;
+			drawInfo.m_prioity		= priority;
 			drawInfo.m_usePlayerOffset = false;
 			m_texMine.m_pTex2D->SetDrawInfo( drawInfo );
 		}
 	}
-
-
-
 }
 

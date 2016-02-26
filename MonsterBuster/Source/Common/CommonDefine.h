@@ -131,7 +131,18 @@ namespace Common{
 		FLOW_MAX
 	};
 
-	//描画の種類 優先
+	//描画の種類
+	enum CATEGORY{
+		CATEGORY_BG,		// 背景表示物
+		CATEGORY_GAME,		// ゲームキャラ、演出等
+		CATEGORY_MENU,		// メニュー
+		CATEGORY_POPUP,		// ポップアップ関連画面説明等
+		CATEGOTY_FADE,		// フェード
+
+		CATEGORY_MAX
+	};
+
+	//描画の優先
 	enum PRIORITY{
 		PRIORITY_LOWEST,
 		PRIORITY_LOW,
@@ -140,7 +151,6 @@ namespace Common{
 		PRIORITY_ABOVE_NORMAL,	// 標準以上
 		PRIORITY_HIGH,
 		PRIORITY_HIGHEST,
-		PRIORITY_SCENE_FADE,
 	
 		PRIORITY_MAX,
 	};
@@ -221,8 +231,10 @@ namespace Common{
 
 	// 画面クラス内のパーツ種類
 	enum PARTS_TYPE_MENU{
-		PARTS_SINGLE_DRAW,	// アニメ情報をもつ程度のシンプルなパーツ
+		PARTS_SINGLE_DRAW,	// アニメ情報をもつだけの通常パーツ
 		PARTS_NUM_COUNTER,	// 与えられた数値を描画し続けるパーツ
+		PARTS_MESSAGE,		// メッセージウインドウパーツ
+		PARTS_POSITION,		// 位置のみを知らせる目印となるパーツ
 
 		PARTS_MAX,
 	};

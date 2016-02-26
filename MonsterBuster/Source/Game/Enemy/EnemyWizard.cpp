@@ -219,6 +219,8 @@ WizardCrystal::WizardCrystal( uint32_t startRot )
 {
 	m_drawTexture.m_pTex2D = Game2DBase::Create( "EnemyWizardCrystal.json" );
 	m_drawTexture.m_pTex2D->UpdateDrawInfo().m_posOrigin = math::Vector2();
+	m_drawTexture.m_pTex2D->UpdateDrawInfo().m_category = Common::CATEGORY_GAME;
+	m_drawTexture.m_pTex2D->UpdateDrawInfo().m_prioity = Common::PRIORITY_ABOVE_NORMAL;
 }
 
 WizardCrystal::~WizardCrystal()

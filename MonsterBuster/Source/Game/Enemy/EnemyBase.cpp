@@ -40,12 +40,11 @@ EnemyBase::EnemyBase( const std::string &jsonName, const uint32_t &uniqueId, con
 
 	m_actionInfoAI.Init();
 	m_drawTexture.m_pTex2D->UpdateDrawInfo().m_fileName = jsonName;
+	m_drawTexture.m_pTex2D->UpdateDrawInfo().m_posOrigin = enemyPos;
+	m_drawTexture.m_pTex2D->UpdateDrawInfo().m_category = Common::CATEGORY_GAME;
 
 	m_textureLife.Init();
 	m_textureLife.m_pTex2D = Game2DBase::Create( "EnemyGauge.json" );
-	m_textureLife.m_pTex2D->UpdateDrawInfo().m_fileName = "EnemyGauge.json";
-
-	m_drawTexture.m_pTex2D->UpdateDrawInfo().m_posOrigin = enemyPos;
 }
 
 EnemyBase::~EnemyBase()
@@ -143,10 +142,14 @@ void EnemyBase::Update()
 	if( pTex2D ){
 		TEX_DRAW_INFO drawInfo;
 		const TEX_INIT_INFO &texInfo = TextureResourceManager::GetInstance()->GetLoadTextureInfo( pTex2D->GetDrawInfo().m_fileName.c_str() );
+		drawInfo.m_fileName = "EnemyGauge.json";
+		drawInfo.m_category = Common::CATEGORY_GAME;
 		drawInfo.m_posOrigin.x = pTex2D->GetDrawInfo().m_posOrigin.x - 5.0f;
 		drawInfo.m_posOrigin.y = pTex2D->GetDrawInfo().m_posOrigin.y + (texInfo.m_sizeHeight / 2) + 10.0f;
 		drawInfo.m_scale.x = ( m_HP/static_cast<float>(GetEnemyDefaultHP()) )*10.0f;
-		m_textureLife.m_pTex2D->SetDrawInfo( drawInfo );
+		if( m_textureLife.m_pTex2D ){
+			m_textureLife.m_pTex2D->SetDrawInfo( drawInfo );
+		}
 	}
 
 	// HP‚ª‚È‚¢‚È‚çŽ€–S

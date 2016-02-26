@@ -29,11 +29,11 @@ public:
 	//! •`‰æ—\–ñ
 	void PushDrawString( const std::string &str, const math::Vector2 &pos, const uint32_t &color = GetColor( 0, 0, 0 ) );
 	void PushDrawInfo( const TEX_DRAW_INFO &texInfo, const int32_t &handle, const Common::PRIORITY &priority = Common::PRIORITY_NORMAL );
-
+	
 	//! •`‰æ—\–ñƒLƒƒƒ“ƒZƒ‹
 	void DeleteDrawInfo( const int32_t &handle );
 	void DeleteDrawInfo( const char *jsonFile );
-	
+
 	//! •`‰æ‚ğŠŠ‚ç‚©‚É‚·‚é‚©ƒtƒ‰ƒO
 	void SetUseBilinear( const bool &flag ){m_useBilinear = flag;}
 
@@ -83,13 +83,15 @@ private:
 	//! •¶š—ñ‚ğ¬Œ`‚µ‚Ä•`‰æ(\n‚ª‚ ‚ê‚Î‰üs‚ğs‚¤)
 	void DrawString( const DRAWSTR &drawTask );
 
-	//! •`‰æw¦
-	void DrawTexture( const uint32_t &drawIndex );
+	//! •`‰æƒ^ƒXƒN‚ğÏ‚Ş
 	void PushDrawInfoMain( const TEX_DRAW_INFO &texInfo, const int32_t &handle, const Common::PRIORITY &priority = Common::PRIORITY_NORMAL );
+	//! •`‰æ
+	void DrawTexture( const DRAW2D &draw2d );
 
 	static Draw2DManager	*s_pInstance;
 
 	bool					m_useBilinear;
+	std::vector< std::vector<DRAW2D> >	m_vDrawTaskCategoty;
 	std::vector<DRAW2D>		m_vDrawTask;
 	std::vector<DRAWSTR>	m_vDrawStringTask;
 };

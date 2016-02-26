@@ -75,6 +75,7 @@ struct TEX_DRAW_INFO{
 	bool				m_usePlayerOffset;	//!<ˆÊ’u•â³‚ÌŽg—p—L–³
 	math::Angle			m_rot;				//!<‰ñ“]î•ñ
 	uint32_t			m_alpha;			//!<“§‰ßî•ñ
+	Common::CATEGORY	m_category;			//!<•`‰æŽí—Þ
 	Common::PRIORITY	m_prioity;			//!<•`‰æ—Dæ“x
 	bool				m_drawForce;		//!<•`‰æ‚ð•K‚¸‚·‚é‚©‚©‚Ç‚¤‚©
 	uint32_t			m_belongLv;			// ƒ}ƒbƒvã‚Å‚ÌŠ‘®‹óŠÔ(“–‚½‚è”»’è)
@@ -90,6 +91,7 @@ struct TEX_DRAW_INFO{
 		m_usePlayerOffset = true;
 		m_rot = math::Angle();
 		m_alpha = 255;
+		m_category = Common::CATEGORY_MAX;
 		m_prioity = Common::PRIORITY_NORMAL;
 		m_drawForce = false;
 		m_belongLv = INVALID_VALUE;

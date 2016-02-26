@@ -54,6 +54,7 @@ bool StageStart::Init()
 	drawInfoPhase.m_fileName = "StageStart01.json";
 	drawInfoPhase.m_posOrigin = math::Vector2( static_cast<float>( -1.0f*m_texSizeW ), 200.0f );
 	drawInfoPhase.m_usePlayerOffset = false;
+	drawInfoPhase.m_category = Common::CATEGORY_MENU;
 	drawInfoPhase.m_prioity = Common::PRIORITY_HIGHEST;
 	m_stagePhaseTex.m_pTex2D->SetDrawInfo( drawInfoPhase );
 	m_stagePhaseTex.m_pTex2D->SetAnim( GetStageAnimStr().c_str() );
@@ -64,6 +65,7 @@ bool StageStart::Init()
 	drawInfoClear.m_fileName = "StageStart02.json";
 	drawInfoClear.m_posOrigin = math::Vector2( static_cast<float>( -1.0f*m_texSizeW ), 520.0f );
 	drawInfoClear.m_usePlayerOffset = false;
+	drawInfoClear.m_category = Common::CATEGORY_MENU;
 	drawInfoClear.m_prioity = Common::PRIORITY_HIGHEST;
 	m_stageClearTex.m_pTex2D->SetDrawInfo( drawInfoClear );
 	m_stageClearTex.m_pTex2D->SetAnim( GetClearAnimStr().c_str() );

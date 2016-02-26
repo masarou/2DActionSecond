@@ -31,6 +31,7 @@ StageTimer::StageTimer( uint32_t startTime )
 	std::string jsonStr = "StageTimer.json";
 	m_plateStageTimer.m_pTex2D = Game2DBase::Create( jsonStr.c_str() );
 	TEX_DRAW_INFO drawInfo;
+	drawInfo.m_category = Common::CATEGORY_MENU;
 	drawInfo.m_prioity = Common::PRIORITY_ABOVE_NORMAL;
 	drawInfo.m_fileName = jsonStr;
 	const TEX_INIT_INFO &texInfo = TextureResourceManager::GetInstance()->GetLoadTextureInfo( jsonStr.c_str() );
@@ -64,6 +65,7 @@ bool StageTimer::Init()
 	TEX_DRAW_INFO drawInfo;
 	std::string jsonStr = "ClockTimer.json";
 	m_animClock.m_pTex2D = Game2DBase::Create( jsonStr.c_str() );
+	drawInfo.m_category = Common::CATEGORY_MENU;
 	drawInfo.m_prioity = Common::PRIORITY_ABOVE_NORMAL;
 	drawInfo.m_fileName = jsonStr;
 	const Common::PARTS_INFO &clockInfo = GetPartsInfo("timeIcon");

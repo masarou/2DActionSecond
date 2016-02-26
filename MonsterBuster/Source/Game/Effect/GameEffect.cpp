@@ -51,6 +51,7 @@ GameEffect::GameEffect( const EFFECT_KIND &kind, const math::Vector2 &pos )
 	m_textureEffect.m_pTex2D = Game2DBase::Create( readFileStr.c_str() );
 	drawInfo.m_fileName = readFileStr;
 	drawInfo.m_posOrigin = pos;
+	drawInfo.m_category = Common::CATEGORY_GAME;
 	drawInfo.m_prioity = Common::PRIORITY_ABOVE_NORMAL;
 	if( m_kind == EFFECT_SLASHING_HIT ){
 		// ŽaŒ‚HIT‚Íƒ‰ƒ“ƒ_ƒ€‚É‰ñ“]
@@ -265,7 +266,7 @@ GameEffectWithCollision::GameEffectWithCollision( const Common::OWNER_TYPE &owne
 	m_drawTexture.m_pTex2D = Game2DBase::Create( readFileStr.c_str() );
 	m_drawTexture.m_pTex2D->UpdateDrawInfo().m_fileName = readFileStr;
 	m_drawTexture.m_pTex2D->UpdateDrawInfo().m_posOrigin = pos;
-
+	m_drawTexture.m_pTex2D->UpdateDrawInfo().m_category = Common::CATEGORY_GAME;
 	m_drawTexture.m_pTex2D->UpdateDrawInfo().m_prioity = Common::PRIORITY_ABOVE_NORMAL;
 }
 
@@ -456,6 +457,7 @@ void GameEffectDamage::CreateEffectDamage( const uint32_t &value, const int32_t 
 		const TEX_INIT_INFO &texInfo = TextureResourceManager::GetInstance()->GetLoadTextureInfo( readFileName.c_str() );
 		basePos.x -= texInfo.m_sizeWidth;
 		tex.m_pTex2D->UpdateDrawInfo().m_posOrigin	= basePos;
+		tex.m_pTex2D->UpdateDrawInfo().m_category	= Common::CATEGORY_GAME;
 		tex.m_pTex2D->UpdateDrawInfo().m_prioity	= Common::PRIORITY_HIGH;
 		damageInfo.m_array2D.push_back( tex );
 	}
@@ -479,6 +481,7 @@ void GameEffectDamage::CreateEffectDamage( const uint32_t &value, const int32_t 
 		const TEX_INIT_INFO &texInfo = TextureResourceManager::GetInstance()->GetLoadTextureInfo( readFileName.c_str() );
 		basePos.x -= texInfo.m_sizeWidth;
 		tex.m_pTex2D->UpdateDrawInfo().m_posOrigin	= basePos;
+		tex.m_pTex2D->UpdateDrawInfo().m_category	= Common::CATEGORY_GAME;
 		tex.m_pTex2D->UpdateDrawInfo().m_prioity	= Common::PRIORITY_HIGH;
 		damageInfo.m_array2D.push_back( tex );
 		damageInfo.m_array2D.at(0).m_pTex2D->SetAnim( "0" );
@@ -560,6 +563,7 @@ GameEffectLoop::GameEffectLoop( const EFFECT_KIND &kind, const math::Vector2 &po
 	m_textureEffect.m_pTex2D = Game2DBase::Create( readFileStr.c_str() );
 	drawInfo.m_fileName = readFileStr;
 	drawInfo.m_posOrigin = pos;
+	drawInfo.m_category = Common::CATEGORY_GAME;
 	drawInfo.m_prioity = Common::PRIORITY_ABOVE_NORMAL;
 	m_textureEffect.m_pTex2D->SetDrawInfo( drawInfo );
 }

@@ -12,6 +12,8 @@
 #include "Common/CommonDefine.h"
 #include "System/Menu/SystemMenuParts.h"
 #include "System/Menu/SystemMenuPartsCounter.h"
+#include "System/Menu/SystemMenuPartsMessageWindow.h"
+#include "System/Menu/SystemMenuPartsPosition.h"
 
 typedef MenuParts *(*pFunkRetMenuParts)( const std::string &partsStr, const std::string &jsonStr, const Common::PRIORITY &priority, const math::Vector2 &originalPos );
 
@@ -21,8 +23,10 @@ struct PARTS_MAP{
 };
 
 static const PARTS_MAP s_partsTable[] = {
-	{ MenuParts::Create,		Common::PARTS_SINGLE_DRAW },
-	{ PartsCounter::Create,		Common::PARTS_NUM_COUNTER },
+	{ MenuParts::Create,				Common::PARTS_SINGLE_DRAW },
+	{ PartsCounter::Create,				Common::PARTS_NUM_COUNTER },
+	{ PartsMessageWindow::Create,		Common::PARTS_MESSAGE },
+	{ PartsPosition::Create,			Common::PARTS_POSITION },
 };
 
 static MenuParts *CreatePartsFactory( const Common::PARTS_TYPE_MENU &type, const std::string &partsStr, const std::string &jsonStr, const Common::PRIORITY &priority, const math::Vector2 &originalPos = math::Vector2() )

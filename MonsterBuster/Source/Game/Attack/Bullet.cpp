@@ -32,6 +32,8 @@ Bullet::Bullet( const Common::OWNER_TYPE ownerType, const math::Vector2 &pos, co
 	drawInfo.Init();
 	drawInfo.m_fileName = jsonStr;
 	drawInfo.m_posOrigin = pos;
+	drawInfo.m_category = Common::CATEGORY_GAME;
+	drawInfo.m_prioity = Common::PRIORITY_NORMAL;
 	m_drawTexture.m_pTex2D->SetDrawInfo( drawInfo );
 
 	if( m_ownerType == Common::OWNER_PLAYER ){

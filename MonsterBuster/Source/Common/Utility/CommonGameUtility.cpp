@@ -813,6 +813,12 @@ void GetPartsInfoFromJson( const std::string &jsonStr, std::map< std::string, Co
 			else if( partsData.get(i).get("partsType").get<std::string>() == "PARTS_NUM_COUNTER" ){
 				info.m_type	= Common::PARTS_NUM_COUNTER;
 			}
+			else if( partsData.get(i).get("partsType").get<std::string>() == "PARTS_MESSAGE" ){
+				info.m_type	= Common::PARTS_MESSAGE;
+			}
+			else if( partsData.get(i).get("partsType").get<std::string>() == "PARTS_POSITION" ){
+				info.m_type	= Common::PARTS_POSITION;
+			}
 		}
 
 		vParts.insert( std::map< std::string, Common::PARTS_INFO >::value_type( name, info ));

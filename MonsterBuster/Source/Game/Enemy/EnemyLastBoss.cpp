@@ -34,7 +34,8 @@ LastBoss::~LastBoss(void)
 bool LastBoss::InitMain()
 {
 	if( m_drawTexture.m_pTex2D ){
-		m_drawTexture.m_pTex2D->UpdateDrawInfo().m_prioity = Common::PRIORITY_ABOVE_NORMAL;
+		m_drawTexture.m_pTex2D->UpdateDrawInfo().m_category	= Common::CATEGORY_GAME;
+		m_drawTexture.m_pTex2D->UpdateDrawInfo().m_prioity	= Common::PRIORITY_ABOVE_NORMAL;
 	}
 	return true;
 }

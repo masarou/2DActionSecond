@@ -83,6 +83,8 @@
     <ClCompile Include="Source\System\Input\SystemInputWatcher.cpp" />
     <ClCompile Include="Source\System\Menu\SystemMenuParts.cpp" />
     <ClCompile Include="Source\System\Menu\SystemMenuPartsCounter.cpp" />
+    <ClCompile Include="Source\System\Menu\SystemMenuPartsMessageWindow.cpp" />
+    <ClCompile Include="Source\System\Menu\SystemMenuPartsPosition.cpp" />
     <ClCompile Include="Source\System\Menu\SystemMenuWindow.cpp" />
     <ClCompile Include="Source\System\Message\SystemMessageManager.cpp" />
     <ClCompile Include="Source\System\Message\SystemMessageUnit.cpp" />
@@ -176,6 +178,8 @@
     <ClInclude Include="Source\System\Menu\SystemMenuParts.h" />
     <ClInclude Include="Source\System\Menu\SystemMenuPartsCounter.h" />
     <ClInclude Include="Source\System\Menu\SystemMenuPartsFactory.h" />
+    <ClInclude Include="Source\System\Menu\SystemMenuPartsMessageWindow.h" />
+    <ClInclude Include="Source\System\Menu\SystemMenuPartsPosition.h" />
     <ClInclude Include="Source\System\Menu\SystemMenuWindow.h" />
     <ClInclude Include="Source\System\Message\SystemMessageManager.h" />
     <ClInclude Include="Source\System\Message\SystemMessageUnit.h" />

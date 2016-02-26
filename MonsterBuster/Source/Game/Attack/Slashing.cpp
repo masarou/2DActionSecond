@@ -55,6 +55,7 @@ Slashing::Slashing( const Common::OWNER_TYPE ownerType, const TYPE_SLASHING &typ
 	TEX_DRAW_INFO drawInfo;
 	drawInfo.m_fileName = jsonStr;
 	drawInfo.m_posOrigin = pos + vecOffset;
+	drawInfo.m_category = Common::CATEGORY_GAME;
 	drawInfo.m_prioity = Common::PRIORITY_ABOVE_NORMAL;
 	m_drawTexture.m_pTex2D->SetDrawInfo( drawInfo );
 }

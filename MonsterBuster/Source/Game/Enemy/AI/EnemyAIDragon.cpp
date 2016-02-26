@@ -302,6 +302,8 @@ DragonFireBomb::DragonFireBomb( const math::Vector2 &pos, const math::Vector2 &v
 	drawInfo.Init();
 	drawInfo.m_fileName = jsonStr;
 	drawInfo.m_posOrigin = pos;
+	drawInfo.m_category = Common::CATEGORY_GAME;
+	drawInfo.m_prioity = Common::PRIORITY_NORMAL;
 	drawInfo.m_rot = pos.GetAngle( Utility::GetPlayerPos() );
 	m_drawTexture.m_pTex2D->SetDrawInfo( drawInfo );
 

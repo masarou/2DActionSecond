@@ -16,6 +16,11 @@ Draw2DManager *Draw2DManager::s_pInstance = NULL;
 Draw2DManager::Draw2DManager(void)
 : m_useBilinear(false)
 {
+	// カテゴリーごとのベクタ準備
+	for( uint32_t i = 0; i < Common::CATEGORY_MAX ; ++i ){
+		std::vector<DRAW2D> cate;
+		m_vDrawTaskCategoty.push_back( cate );
+	}
 }
 
 Draw2DManager::~Draw2DManager(void)
@@ -86,7 +91,12 @@ void Draw2DManager::PushDrawInfoMain( const TEX_DRAW_INFO &texInfo, const int32_
 	task.m_info		= texInfo;
 	task.m_handle	= handle;
 
-	m_vDrawTask.push_back(task);
+	if( task.m_info.m_category != Common::CATEGORY_MAX ){
+		m_vDrawTaskCategoty.at( static_cast<uint32_t>( task.m_info.m_category ) ).push_back( task );
+	}
+	else{
+  		m_vDrawTask.push_back(task);
+	}
 }
 
 
@@ -97,6 +107,18 @@ void Draw2DManager::PushDrawInfoMain( const TEX_DRAW_INFO &texInfo, const int32_
 /* ================================================ */
 void Draw2DManager::DeleteDrawInfo( const int32_t &handle )
 {
+	for( uint32_t i = 0; i < m_vDrawTaskCategoty.size() ; ++i ){
+		std::vector<DRAW2D>::iterator it = m_vDrawTaskCategoty.at(i).begin();
+		for( uint32_t j = 0; j < m_vDrawTaskCategoty.at(i).size() ; ++j ){
+			if( handle == (*it).m_handle ){
+				it = m_vDrawTask.erase(it);
+				break;
+			}
+			++it;
+		}
+	}
+
+
 	std::vector<DRAW2D>::iterator it = m_vDrawTask.begin();
 	for( uint32_t i = 0; i < m_vDrawTask.size(); ++i ){
 		if( handle == m_vDrawTask.at(i).m_handle ){
@@ -128,18 +150,22 @@ void Draw2DManager::DeleteDrawInfo( const char *jsonFile )
 void Draw2DManager::Action()
 {
 	// 予約テクスチャ描画
-	for( uint32_t i = 0; i < Common::PRIORITY_MAX; ++i ){
-		for( uint32_t j = 0; j < m_vDrawTask.size(); ++j ){
-			if( m_vDrawTask.at(j).m_info.m_prioity == static_cast<Common::PRIORITY>(i) ){
-				DrawTexture(j);
+	for( uint32_t i = 0; i < Common::CATEGORY_MAX; ++i ){
+		for( uint32_t j = 0; j < Common::PRIORITY_MAX; ++j ){
+			for( uint32_t k = 0; k < m_vDrawTaskCategoty.at(i).size() ; ++k ){
+				if( m_vDrawTaskCategoty.at(i).at(k).m_info.m_prioity == static_cast<Common::PRIORITY>(j) ){
+					DrawTexture( m_vDrawTaskCategoty.at(i).at(k) );
+				}
 			}
 		}
-		// 文字列は優先度固定( PRIORITY_HIGH )
-		if( Common::PRIORITY_HIGH == static_cast<Common::PRIORITY>(i) ){
-			for( uint32_t i = 0; i < m_vDrawStringTask.size(); ++i ){
-				DrawString( m_vDrawStringTask.at(i) );
-			}
-		}
+
+		// 描画した情報はクリア
+		m_vDrawTaskCategoty.at(i).clear();
+	}
+
+	// 文字列は最後に描画
+	for( uint32_t i = 0; i < m_vDrawStringTask.size(); ++i ){
+		DrawString( m_vDrawStringTask.at(i) );
 	}
 
 #ifdef _DEBUG
@@ -196,33 +222,28 @@ void Draw2DManager::DrawString( const DRAWSTR &drawTask )
  * @brief	描画指示
  */
 /* ================================================ */
-void Draw2DManager::DrawTexture( const uint32_t &drawIndex )
+void Draw2DManager::DrawTexture( const DRAW2D &draw2d )
 {
-	if( drawIndex > m_vDrawTask.size() ){
-		return;
-	}
-
-	DRAW2D &drawInfo = m_vDrawTask.at(drawIndex);
-	SetDrawBlendMode( DX_BLENDMODE_ALPHA, drawInfo.m_info.m_alpha );
+	SetDrawBlendMode( DX_BLENDMODE_ALPHA, draw2d.m_info.m_alpha );
 
 	// 画像の描画位置取得
-	math::Vector2 pos = math::Vector2( drawInfo.m_info.m_posOrigin.x, drawInfo.m_info.m_posOrigin.y );
-	if( drawInfo.m_info.m_usePlayerOffset ){
+	math::Vector2 pos = math::Vector2( draw2d.m_info.m_posOrigin.x, draw2d.m_info.m_posOrigin.y );
+	if( draw2d.m_info.m_usePlayerOffset ){
 		pos -= Utility::GetPlayerOffsetPos();
 	}
 
 	// 描画画像のサイズ取得
-	const TEX_INIT_INFO &texInfo = TextureResourceManager::GetInstance()->GetLoadTextureInfo( drawInfo.m_info.m_fileName.c_str() );
+	const TEX_INIT_INFO &texInfo = TextureResourceManager::GetInstance()->GetLoadTextureInfo( draw2d.m_info.m_fileName.c_str() );
 
 	DrawRotaGraph3(
 		static_cast<int32_t>(pos.x)
 		, static_cast<int32_t>(pos.y)
-		, ( drawInfo.m_info.m_arrangeOrigin.x == INVALID_FVALUE ) ? texInfo.m_sizeWidth / 2 : static_cast<int>( drawInfo.m_info.m_arrangeOrigin.x )
-		, ( drawInfo.m_info.m_arrangeOrigin.y == INVALID_FVALUE ) ? texInfo.m_sizeHeight / 2 : static_cast<int>( drawInfo.m_info.m_arrangeOrigin.y )
-		, static_cast<double>(drawInfo.m_info.m_scale.x)
-		, static_cast<double>(drawInfo.m_info.m_scale.y)
-		, static_cast<double>(drawInfo.m_info.m_rot.GetRadian())
-		, drawInfo.m_handle
+		, ( draw2d.m_info.m_arrangeOrigin.x == INVALID_FVALUE ) ? texInfo.m_sizeWidth / 2 : static_cast<int>( draw2d.m_info.m_arrangeOrigin.x )
+		, ( draw2d.m_info.m_arrangeOrigin.y == INVALID_FVALUE ) ? texInfo.m_sizeHeight / 2 : static_cast<int>( draw2d.m_info.m_arrangeOrigin.y )
+		, static_cast<double>(draw2d.m_info.m_scale.x)
+		, static_cast<double>(draw2d.m_info.m_scale.y)
+		, static_cast<double>(draw2d.m_info.m_rot.GetRadian())
+		, draw2d.m_handle
 		, static_cast<int>(true)
 		, static_cast<int>(false)
 		);

@@ -144,11 +144,12 @@ void BgManager::Update()
 				m_drawTexture.m_pTex2D = Game2DBase::Create( fileName.c_str() );
 				TEX_DRAW_INFO drawInfo;
 				drawInfo.Init();
-				drawInfo.m_fileName = fileName;
-				drawInfo.m_posOrigin.x = WINDOW_WIDTH / 2.0f;
-				drawInfo.m_posOrigin.y = WINDOW_HEIGHT / 2.0f;
-				drawInfo.m_usePlayerOffset = false;
-				drawInfo.m_prioity = Common::PRIORITY_LOWEST;
+				drawInfo.m_fileName			= fileName;
+				drawInfo.m_posOrigin.x		= WINDOW_WIDTH / 2.0f;
+				drawInfo.m_posOrigin.y		= WINDOW_HEIGHT / 2.0f;
+				drawInfo.m_usePlayerOffset	= false;
+				drawInfo.m_category			= Common::CATEGORY_BG;
+				drawInfo.m_prioity			= Common::PRIORITY_NORMAL;
 				m_drawTexture.m_pTex2D->SetDrawInfo( drawInfo );
 			}
 

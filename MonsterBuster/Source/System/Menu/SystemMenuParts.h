@@ -58,16 +58,14 @@ protected:
 private:
 
 	// パーツのセットアップ再帰関数
-	void SetupParts();
+	void SetupParts( const Common::PRIORITY &priority );
 
 protected:
 	
 	bool										m_invalidDraw;	// 描画するかどうかフラグ(立ってたら描画しない)
 	std::string									m_partsNameStr;	// 親に名づけられたパーツ名
 	std::string									m_readJsonStr;	// 読み込んだjsonファイル名
-	math::Vector2								m_originPos;	// 親クラスに指定された位置情報
-	Common::PRIORITY							m_priority;		// 描画優先度
-
+	math::Vector2								m_relativePos;	// 親クラスからみた相対座標
 	Texture2D									m_texMine;		// 自身のテクスチャクラス
 
 	std::vector<MenuParts*>						m_partsArray;	// このクラスのパーツに付随しているパーツ

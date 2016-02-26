@@ -52,6 +52,7 @@ static const char *JSON_OTHER_PATH			= "Data/Json/Other/";
 static const char *BGM_PATH					= "Data/Sound/BGM/";
 static const char *SE_PATH					= "Data/Sound/SE/";
 static const char *TEXTURE_PATH				= "Data/Texture/";
+static const char *TEXT_PATH				= "Data/Text/";
 
 //リークチェック用
 #define _CRTDBG_MAP_ALLOC

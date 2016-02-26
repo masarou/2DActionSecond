@@ -86,6 +86,7 @@ bool GamePlayer::Init()
 {
 	// 描画クラスセットアップ
 	TEX_DRAW_INFO drawInfo;
+	drawInfo.m_category	= Common::CATEGORY_GAME;
 	drawInfo.m_prioity = Common::PRIORITY_ABOVE_NORMAL;
 	drawInfo.m_usePlayerOffset = false;
 	drawInfo.m_posOrigin = WINDOW_CENTER;

@@ -6,6 +6,7 @@
 		{"partsName":"choiceBG2",	"loadJson":"ChoiceBG.json",	"x": 640,	"y": 540},
 		{"partsName":"choice0",		"loadJson":"SelectChoice.json",	"x": 640,	"y": 400},
 		{"partsName":"choice1",		"loadJson":"SelectChoice.json",	"x": 640,	"y": 470},
-		{"partsName":"choice2",		"loadJson":"SelectChoice.json",	"x": 640,	"y": 540}
+		{"partsName":"choice2",		"loadJson":"SelectChoice.json",	"x": 640,	"y": 540},
+		{"partsName":"frame",		"loadJson":"StageSelectFrame.json",	"partsType":"PARTS_MESSAGE",	"x": 640,	"y": 560}
 	]
 }

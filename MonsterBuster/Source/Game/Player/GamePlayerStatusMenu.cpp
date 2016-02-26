@@ -36,6 +36,7 @@ bool PlayerStatusMenu::InitMenu()
 	m_lifeGauge.Init();
 	m_lifeGauge.m_pTex2D = Game2DBase::Create("LifeGauge.json");
 	drawInfo.m_fileName = "LifeGauge.json";
+	drawInfo.m_category = Common::CATEGORY_MENU;
 	drawInfo.m_prioity = Common::PRIORITY_HIGH;
 	drawInfo.m_posOrigin = math::Vector2( 22, WINDOW_HEIGHT - 24 );
 	drawInfo.m_usePlayerOffset = false;

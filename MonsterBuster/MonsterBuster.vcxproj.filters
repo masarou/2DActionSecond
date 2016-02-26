@@ -355,6 +355,12 @@
     <ClInclude Include="Source\Game\Enemy\EnemySlimeKing.h">
       <Filter>Game\Enemy</Filter>
     </ClInclude>
+    <ClInclude Include="Source\System\Menu\SystemMenuPartsMessageWindow.h">
+      <Filter>System\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Menu\SystemMenuPartsPosition.h">
+      <Filter>System\Menu</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\main.cpp" />
@@ -606,6 +612,12 @@
     </ClCompile>
     <ClCompile Include="Source\Game\Enemy\EnemySlimeKing.cpp">
       <Filter>Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\Menu\SystemMenuPartsMessageWindow.cpp">
+      <Filter>System\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\Menu\SystemMenuPartsPosition.cpp">
+      <Filter>System\Menu</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
